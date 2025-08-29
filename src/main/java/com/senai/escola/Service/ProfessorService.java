@@ -11,7 +11,7 @@ import java.util.List;
 public class ProfessorService {
     private final Professorrepository repository;
 
-    public ProfessorService(Professorrepository professorrepository) {
+    public ProfessorService(Professorrepository repository) {
         this.repository = repository;
     }
 
@@ -21,7 +21,7 @@ public class ProfessorService {
     }
 
     public Professor salvarNovoprofessor(Professor professor){
-        return repository.save(Professor);
+        return repository.save(professor);
     }
 
     public Professor buscarprofessorid(Long id){
